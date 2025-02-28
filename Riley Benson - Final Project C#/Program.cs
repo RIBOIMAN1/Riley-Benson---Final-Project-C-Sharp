@@ -5,7 +5,7 @@
 
 namespace Riley_Benson___Final_Project_C_
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -24,7 +24,7 @@ namespace Riley_Benson___Final_Project_C_
 					Console.WriteLine("3. Edit subscription");
 					Console.WriteLine("4. Delete subscription");
 					Console.WriteLine("5. Exit");
-					Console.Write("Enter your choice below (1-5): ");
+					Console.Write("Enter your choice (1-5): ");
 					int choice = int.Parse(Console.ReadLine());
 					if (choice == 1)
 					{
@@ -32,7 +32,7 @@ namespace Riley_Benson___Final_Project_C_
 					}
 					else if (choice == 2)
 					{
-						
+						DescribeSub(subs);
 					}
 					else if (choice == 3)
 					{

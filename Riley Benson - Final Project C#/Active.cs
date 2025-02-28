@@ -14,6 +14,10 @@ namespace Riley_Benson___Final_Project_C_
 		private string _name;
 		private double _price;
 		private int _months;
+		/// <summary>
+		/// Obtains subscription price.
+		/// </summary>
+		/// <exception cref="ArgumentException">Gives an error to the user when the price is less than or equal to 0.</exception>
 		public double Price
 		{
 			get => _price;
@@ -36,6 +40,20 @@ namespace Riley_Benson___Final_Project_C_
 				if (string.IsNullOrWhiteSpace(value))
 					throw new ArgumentException("Empty and null inputs are invalid, try again.");
 				_name = value;
+			}
+		}
+		/// <summary>
+		/// Obtains the length of the subscription in months.
+		/// </summary>
+		/// <exception cref="ArgumentException">Gives an error to the user when the price is less than or equal to 0.</exception>
+		public int Months
+		{
+			get => _months;
+			set
+			{
+				if (value <= 0)
+					throw new ArgumentException("The age cannot be less than 0, try again.");
+				_months = value;
 			}
 		}
 	}
