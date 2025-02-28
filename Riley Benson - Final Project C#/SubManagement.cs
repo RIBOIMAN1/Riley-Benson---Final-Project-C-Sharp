@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Riley_Benson___Final_Project_C_
 {
-    class SubManagement
+    public class SubManagement
     {
+        
     }
 }

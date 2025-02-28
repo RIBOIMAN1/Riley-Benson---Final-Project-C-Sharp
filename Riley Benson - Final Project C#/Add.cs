@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Riley_Benson___Final_Project_C_
 {
-    public class Edit
+	public class Add
     {
         
     }

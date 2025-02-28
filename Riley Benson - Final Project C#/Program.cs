@@ -9,6 +9,8 @@ namespace Riley_Benson___Final_Project_C_
     {
         static void Main(string[] args)
         {
+			List<SubManagement> subs = new List<SubManagement>();
+			Add addSubs = new Add();
             bool programActive = true;
             Console.WriteLine("Welcome to Pixel Hub!");
             Console.WriteLine("Your Premium Video Game Suvbscription Manager!");
@@ -44,6 +46,7 @@ namespace Riley_Benson___Final_Project_C_
 					{
 						programActive = false;
 						Console.WriteLine("Thank you for using Pixel Hub!");
+						Console.WriteLine("Goodbye!");
 					}
 					else
 					{
