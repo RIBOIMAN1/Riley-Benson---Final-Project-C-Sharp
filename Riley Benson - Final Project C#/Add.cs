@@ -34,6 +34,11 @@ namespace Riley_Benson___Final_Project_C_
 			int months;
 			if (!int.TryParse(Console.ReadLine(), out months) || months <= 0)
 				throw new ArgumentException("The amount of months your subscription will last cannot be less than or equal to 0, try again.");
+			// Adds the inputted subscription into the list of subscriptions and displays the details of the subscription(s).
+			subs.Add(newSub);
+			newSub.DescribeSub(name, price, months);
+			Console.WriteLine($"\nThe subscription '{name}' has been added to the list successfully!");
+			Console.WriteLine("Returning to the main menu...");
 		}
 	}
 }
