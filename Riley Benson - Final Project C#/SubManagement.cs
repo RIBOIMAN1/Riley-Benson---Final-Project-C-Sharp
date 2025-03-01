@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Riley_Benson___Final_Project_C_
 {
-    public class SubManagement
-    {
+	public class SubManagement
+	{
 		/// <summary>
 		/// Uses a subscription's name, price, and the duration of the subscription to describe it.
 		/// </summary>
@@ -17,6 +17,11 @@ namespace Riley_Benson___Final_Project_C_
 		public void DescribeSub(string name, double price, int months)
 		{
 			Console.WriteLine($"Subscription's name: {name}, subscription's price: {price}, subscription's duration: {months} months");
+		}
+		public string FetchSubName()
+		{
+			// FetchSubName method
+			return "This is a placeholder subscription.";
 		}
 	}
 }
