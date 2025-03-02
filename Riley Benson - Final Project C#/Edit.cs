@@ -58,8 +58,7 @@ namespace Riley_Benson___Final_Project_C_
 			int newSubMonths;
 			if (!int.TryParse(Console.ReadLine(), out newSubMonths) || newSubMonths <= 0)
 				throw new ArgumentException("The amount of months your subscription will last cannot be less than or equal to 0, try again.");
-			// Updates the subscription and its details.
-			UpdateSubscription(subs, editChoice - 1, newSubName, newSubPrice, newSubMonths);
+			// Tells the user that their subscription has been updated successfully.
 			Console.WriteLine($"\nThe subscription {editChoice} has been updated successfully!");
 			Console.WriteLine("Returning to the main menu...");
 		}

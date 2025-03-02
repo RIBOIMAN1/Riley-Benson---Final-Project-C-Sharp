@@ -11,7 +11,10 @@ namespace Riley_Benson___Final_Project_C_
         {
 			List<SubManagement> subs = new List<SubManagement>();
 			Add addSubs = new Add();
-            bool programActive = true;
+			Add newSub = new Add();
+			Edit editSubs = new Edit();
+			Delete deleteSubs = new Delete();
+			bool programActive = true;
             Console.WriteLine("Welcome to Pixel Hub!");
             Console.WriteLine("Your Premium Video Game Subscription Manager!");
             Console.WriteLine("\nChoose from one of the following options to get started on your journey to better spending habits:");
@@ -26,27 +29,38 @@ namespace Riley_Benson___Final_Project_C_
 					Console.WriteLine("5. Exit");
 					Console.Write("Enter your choice (1-5): ");
 					int choice = int.Parse(Console.ReadLine());
-					// Choice #1 in the list.
+					// Choice #1 in the menu.
 					if (choice == 1)
 					{
-						
+						addSubs.AddSubscription(subs);
 					}
-					// Choice #2 in the list.
+					// Choice #2 in the menu.
 					else if (choice == 2)
 					{
-						DescribeSub(subs);
+						if (subs.Count == 0)
+						{
+							Console.WriteLine("\nThere are no currently active subscriptions to display.");
+						}
+						else
+						{
+							Console.WriteLine("\nBelow are your active subscriptions:");
+							for (int i = 0; i < subs.Count; i++)
+							{
+								Console.WriteLine($"{i + 1}. {subs[i].FetchSubName()}");
+							}
+						}
 					}
-					// Choice #3 in the list.
+					// Choice #3 in the menu.
 					else if (choice == 3)
 					{
-						
+						editSubs.EditSubscription(subs);
 					}
-					// Choice #4 in the list.
+					// Choice #4 in the menu.
 					else if (choice == 4)
 					{
-						
+						deleteSubs.DeleteSub(subs);
 					}
-					// Choice #5 in the list.
+					// Choice #5 in the menu.
 					else if (choice == 5)
 					{
 						programActive = false;
