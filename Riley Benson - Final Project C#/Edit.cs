@@ -25,7 +25,7 @@ namespace Riley_Benson___Final_Project_C_
                 return;
 			}
             Console.WriteLine("\nGetting ready to edit subscription...");
-            /// List the different subscriptions the user of the program has to them.
+            // List the different subscriptions the user of the program has to them.
             Console.WriteLine("\nBelow is your current list of subscriptions: ");
 			for (int i = 0; i < subs.Count; i++)
 			{
@@ -39,6 +39,29 @@ namespace Riley_Benson___Final_Project_C_
 			{
 				throw new ArgumentException($"Your choice is invalid, please choose a number between 1 and {subs.Count}.");
 			}
+			// Uses the subscription that has been selected by the user.
+			SubManagement chosenSub = subs[editChoice - 1];
+			string currentSubName = chosenSub.FetchSubName();
+			Console.WriteLine($"\nGetting ready to edit subscription: {currentSubName}");
+			// Obtains the new name of the subscription you are editing.
+			Console.Write("\nEnter the new name for this subscription: ");
+			string newSubName = Console.ReadLine();
+			if (string.IsNullOrWhiteSpace(newSubName))
+				throw new ArgumentException("Empty and null inputs are invalid, try again.");
+			// Obtains the new name of the subscription you are editing.
+			Console.Write("Enter the new monthly price for your subscription: $");
+			double newSubPrice;
+			if (!double.TryParse(Console.ReadLine(), out newSubPrice) || newSubPrice <= 0)
+				throw new ArgumentException("The price cannot be less than or equal to 0, try again.");
+			// Obtains the new duration in months of the subscription you are editing.
+			Console.WriteLine("Enter the amount of months your subscription will last: ");
+			int newSubMonths;
+			if (!int.TryParse(Console.ReadLine(), out newSubMonths) || newSubMonths <= 0)
+				throw new ArgumentException("The amount of months your subscription will last cannot be less than or equal to 0, try again.");
+			// Updates the subscription and its details.
+			UpdateSubscription(subs, editChoice - 1, newSubName, newSubPrice, newSubMonths);
+			Console.WriteLine($"\nThe subscription {editChoice} has been updated successfully!");
+			Console.WriteLine("Returning to the main menu...");
 		}
-    }
+	}
 }

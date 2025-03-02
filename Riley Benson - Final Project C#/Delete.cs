@@ -17,7 +17,7 @@ namespace Riley_Benson___Final_Project_C_
         /// <param name="subs">List of subscriptions</param>
         public void DeleteSub(List<SubManagement> subs)
         {
-            /// Checks for an empty subscriprtion list, and returns messages to the user if true.
+            // Checks for an empty subscriprtion list, and returns messages to the user if true.
             if (subs.Count == 0)
             {
                 Console.WriteLine("\nNo subscriptions are available to delete.");
