@@ -41,7 +41,7 @@ namespace Riley_Benson___Final_Project_C_
 			}
 			// Handles what subscription gets deleted.
 			SubManagement deletableSub = subs[deleteChoice - 1];
-			string subName = deletableSub.FetchSubName();
+			string subName = deletableSub.GetName();
             // Confirms subscription deletion
             Console.WriteLine($"Are you sure '{subName}' is the subscription you want to delete from your list? (type 'yes' or 'no'): ");
 			string confirmPrompt = Console.ReadLine().ToLower();

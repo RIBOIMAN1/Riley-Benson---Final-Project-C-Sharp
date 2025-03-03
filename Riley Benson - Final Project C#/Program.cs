@@ -72,9 +72,9 @@ namespace Riley_Benson___Final_Project_C_
 						Console.WriteLine("Your choice is invalid, please choose a number between 1 and 5.");
 					}
 				}
-				catch (Exception ex)
+				catch (Exception)
 				{
-					Console.WriteLine($"Error: {ex.Message}");
+					Console.WriteLine($"Your input is not a proper integer; use integers in this menu, and make sure to input a number between 1 and 5.");
 				}
 			}
 		}

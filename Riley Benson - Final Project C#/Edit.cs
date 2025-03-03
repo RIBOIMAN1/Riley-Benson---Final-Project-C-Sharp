@@ -41,8 +41,10 @@ namespace Riley_Benson___Final_Project_C_
 			}
 			// Uses the subscription that has been selected by the user.
 			SubManagement chosenSub = subs[editChoice - 1];
-			string currentSubName = chosenSub.FetchSubName();
-			Console.WriteLine($"\nGetting ready to edit subscription: {currentSubName}");
+			string subName = chosenSub.GetName();
+			string currentSubDetails = chosenSub.FetchSubName();
+			Console.WriteLine($"\nGetting ready to edit subscription: {subName}");
+			Console.WriteLine($"{currentSubDetails}");
 			// Obtains the new name of the subscription you are editing.
 			Console.Write("\nEnter the new name for this subscription: ");
 			string newSubName = Console.ReadLine();
@@ -58,8 +60,10 @@ namespace Riley_Benson___Final_Project_C_
 			int newSubMonths;
 			if (!int.TryParse(Console.ReadLine(), out newSubMonths) || newSubMonths <= 0)
 				throw new ArgumentException("The amount of months your subscription will last cannot be less than or equal to 0, try again.");
+			// Updates the values of the selected subscription.
+			chosenSub.DescribeSub(newSubName, newSubPrice, newSubMonths);
 			// Tells the user that their subscription has been updated successfully.
-			Console.WriteLine($"\nThe subscription {editChoice} has been updated successfully!");
+			Console.WriteLine($"The subscription '{newSubName}' has been updated successfully!");
 			Console.WriteLine("Returning to the main menu...");
 		}
 	}
