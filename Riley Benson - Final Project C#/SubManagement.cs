@@ -40,8 +40,10 @@ namespace Riley_Benson___Final_Project_C_
 		}
 		public string FetchSubName()
 		{
+			// Total price
+			double totalPrice = this.price * this.months;
 			// Name, price, and duration in months output.
-			return ($"Subscription's name: {name}, subscription's price: ${price}, subscription's duration: {months} months");
+			return ($"Subscription's name: {name}, subscription's price: ${price}, subscription's duration: {months} months, accumulated subscription price: ${totalPrice}");
 		}
 		/// <summary>
 		/// Makes the confirmation message for the deletion of a subscription only show the name rather than all of the details.
