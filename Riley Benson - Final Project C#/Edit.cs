@@ -56,7 +56,7 @@ namespace Riley_Benson___Final_Project_C_
 			if (!double.TryParse(Console.ReadLine(), out newSubPrice) || newSubPrice <= 0)
 				throw new ArgumentException("The price cannot be less than or equal to 0, try again.");
 			// Obtains the new duration in months of the subscription you are editing.
-			Console.WriteLine("Enter the amount of months your subscription will last: ");
+			Console.Write("Enter the amount of months your subscription will last: ");
 			int newSubMonths;
 			if (!int.TryParse(Console.ReadLine(), out newSubMonths) || newSubMonths <= 0)
 				throw new ArgumentException("The amount of months your subscription will last cannot be less than or equal to 0, try again.");

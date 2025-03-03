@@ -38,6 +38,10 @@ namespace Riley_Benson___Final_Project_C_
 			this.price = price;
 			this.months = months;
 		}
+		/// <summary>
+		/// Does calculations for the total price of the subscription and outputs info about the name, price, and duration in months of the subscription.
+		/// </summary>
+		/// <returns>Comprehensive details of the subscription.</returns>
 		public string FetchSubName()
 		{
 			// Total price

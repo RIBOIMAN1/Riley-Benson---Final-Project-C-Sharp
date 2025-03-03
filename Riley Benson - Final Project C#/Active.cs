@@ -52,7 +52,7 @@ namespace Riley_Benson___Final_Project_C_
 			set
 			{
 				if (value <= 0)
-					throw new ArgumentException("The age cannot be less than 0, try again.");
+					throw new ArgumentException("The months cannot be less than 0, try again.");
 				_months = value;
 			}
 		}
